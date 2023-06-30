@@ -2,5 +2,9 @@
 
 $subject= $_GET['subject'];
 $text= $_GET['text'];
-echo $subject." ".$text;
+
+$censored_text= str_replace($subject, '***', $text);
+
+echo $text." ".strlen($text)."<br>";
+echo $censored_text." ".strlen($censored_text);
 ?>
